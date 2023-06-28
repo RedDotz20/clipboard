@@ -11,6 +11,7 @@ module.exports = {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic':
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+				'header-desktop': "url('/public/bg-header-desktop.png')",
 			},
 			backgroundColor: {
 				'hsl-233': 'hsl(233, 100%, 69%)',
