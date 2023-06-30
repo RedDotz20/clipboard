@@ -29,7 +29,7 @@ export default function Clipboard() {
 				<DownloadButtons />
 			</header>
 
-			<section className="flex flex-col items-center justify-center w-full">
+			<section className="flex flex-col items-center justify-center w-full mb-36">
 				<h1 className="mb-4 text-3xl font-semibold">
 					keep track of your snippets
 				</h1>
@@ -42,7 +42,7 @@ export default function Clipboard() {
 				<div className="flex justify-center w-full gap-32">
 					<Image
 						src="/image-computer.png"
-						alt="Logo"
+						alt="image-computer"
 						width={800}
 						height={600}
 					/>
@@ -63,6 +63,23 @@ export default function Clipboard() {
 						</p>
 					</div>
 				</div>
+			</section>
+
+			<section className="flex flex-col items-center justify-center w-full mb-36">
+				<h1 className="mb-4 text-3xl font-semibold text-center">
+					Access Clipboard anywhere
+				</h1>
+				<p className="text-center max-w-[600px] break-words mb-16">
+					Whether you're on the go, or at your computer, you can access all your
+					Clipboard snippets in a few simple clicks
+				</p>
+
+				<Image
+					src="/image-devices.png"
+					alt="image-devices"
+					width={800}
+					height={600}
+				/>
 			</section>
 		</main>
 	);
