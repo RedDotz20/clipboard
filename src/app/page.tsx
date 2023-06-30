@@ -19,7 +19,7 @@ export default function Clipboard() {
 					width={100}
 					height={100}
 				/>
-				<h1 className="mb-4 text-4xl font-semibold">
+				<h1 className="mb-4 text-4xl font-semibold text-center">
 					A history of everything you copy
 				</h1>
 				<p className="text-center max-w-[600px] break-words">
@@ -39,7 +39,7 @@ export default function Clipboard() {
 					iOS apps will help you organize everything
 				</p>
 
-				<div className="flex justify-center w-full gap-32">
+				<div className="flex flex-wrap justify-center w-full gap-32">
 					<Image
 						src="/image-computer.png"
 						alt="image-computer"
@@ -90,7 +90,7 @@ export default function Clipboard() {
 					We've got the tools to boost your productivity.
 				</p>
 
-				<div className="flex items-baseline gap-8">
+				<div className="flex flex-wrap items-baseline justify-center gap-8">
 					<div className="flex flex-col justify-center text-center">
 						<div className="flex justify-center w-full h-full mb-10 align-center">
 							<Image
@@ -111,7 +111,7 @@ export default function Clipboard() {
 						<div className="flex justify-center w-full h-full mb-10 align-center">
 							<Image
 								src="/icon-text.svg"
-								alt="blacklist"
+								alt="text"
 								width={40}
 								height={40}
 							/>
@@ -127,7 +127,7 @@ export default function Clipboard() {
 						<div className="flex justify-center w-full h-full mb-10 align-center">
 							<Image
 								src="/icon-preview.svg"
-								alt="blacklist"
+								alt="preview"
 								width={40}
 								height={40}
 							/>
@@ -137,6 +137,49 @@ export default function Clipboard() {
 							Quick preview of all snippets on your Clipboard for easy access.
 						</p>
 					</div>
+				</div>
+			</section>
+
+			<section className="flex flex-wrap items-center justify-center w-full gap-16">
+				<div>
+					<Image
+						src="/logo-google.png"
+						alt="google"
+						width={120}
+						height={200}
+					/>
+				</div>
+				<div>
+					<Image
+						src="/logo-ibm.png"
+						alt="google"
+						width={120}
+						height={200}
+					/>
+				</div>
+				<div>
+					<Image
+						src="/logo-microsoft.png"
+						alt="google"
+						width={120}
+						height={200}
+					/>
+				</div>
+				<div>
+					<Image
+						src="/logo-hp.png"
+						alt="google"
+						width={120}
+						height={200}
+					/>
+				</div>
+				<div>
+					<Image
+						src="/logo-vector-graphics.png"
+						alt="google"
+						width={120}
+						height={200}
+					/>
 				</div>
 			</section>
 		</main>
