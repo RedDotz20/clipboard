@@ -30,7 +30,7 @@ export default function Clipboard() {
 			</header>
 
 			<section className="flex flex-col items-center justify-center w-full mb-36">
-				<h1 className="mb-4 text-3xl font-semibold">
+				<h1 className="mb-4 text-3xl font-semibold text-center">
 					keep track of your snippets
 				</h1>
 				<p className="text-center max-w-[600px] break-words mb-16">
@@ -47,17 +47,23 @@ export default function Clipboard() {
 						height={600}
 					/>
 					<div className="my-auto">
-						<h2 className="mb-4 text-2xl font-black">Quick Search</h2>
-						<p className="max-w-[380px] break-words mb-14">
+						<h2 className="mb-4 text-2xl font-black text-center">
+							Quick Search
+						</h2>
+						<p className="max-w-[380px] break-words mb-14 text-center">
 							Easily search your snippets by content, category, web address,
 							application, and more
 						</p>
-						<h2 className="mb-4 text-2xl font-black">iCloud Sync</h2>
-						<p className="max-w-[380px] break-words mb-14">
+						<h2 className="mb-4 text-2xl font-black text-center">
+							iCloud Sync
+						</h2>
+						<p className="max-w-[380px] break-words mb-14 text-center">
 							Instantly saves and syncs snippets across all your devices.
 						</p>
-						<h2 className="mb-4 text-2xl font-black">Complete History</h2>
-						<p className="max-w-[380px] break-words mb-14">
+						<h2 className="mb-4 text-2xl font-black text-center">
+							Complete History
+						</h2>
+						<p className="max-w-[380px] break-words mb-14 text-center">
 							Retrieve any snippets from the first moment you started using the
 							app.
 						</p>
