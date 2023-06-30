@@ -65,7 +65,7 @@ export default function Clipboard() {
 				</div>
 			</section>
 
-			<section className="flex flex-col items-center justify-center w-full mb-36">
+			<section className="flex flex-col items-center justify-center w-full mb-14">
 				<h1 className="mb-4 text-3xl font-semibold text-center">
 					Access Clipboard anywhere
 				</h1>
@@ -80,6 +80,64 @@ export default function Clipboard() {
 					width={800}
 					height={600}
 				/>
+			</section>
+
+			<section className="flex flex-col items-center justify-center w-full mb-36">
+				<h1 className="mb-4 text-3xl font-semibold text-center">
+					Supercharge your workflow
+				</h1>
+				<p className="text-center max-w-[600px] break-words mb-16">
+					We've got the tools to boost your productivity.
+				</p>
+
+				<div className="flex items-baseline gap-8">
+					<div className="flex flex-col justify-center text-center">
+						<div className="flex justify-center w-full h-full mb-10 align-center">
+							<Image
+								src="/icon-blacklist.svg"
+								alt="blacklist"
+								width={40}
+								height={40}
+							/>
+						</div>
+						<h2 className="mb-4 text-3xl font-semibold">Create blacklists</h2>
+						<p className="text-center max-w-[350px] break-words">
+							Ensure sensitive information never makes its way to your clipboard
+							by excluding certain sources
+						</p>
+					</div>
+
+					<div className="flex flex-col justify-center text-center">
+						<div className="flex justify-center w-full h-full mb-10 align-center">
+							<Image
+								src="/icon-text.svg"
+								alt="blacklist"
+								width={40}
+								height={40}
+							/>
+						</div>
+
+						<h2 className="mb-4 text-3xl font-semibold">Plain text snippets</h2>
+						<p className="text-center max-w-[350px] break-words">
+							Remove unwanted formatting from copied text for a consistent look.
+						</p>
+					</div>
+
+					<div className="flex flex-col justify-center text-center">
+						<div className="flex justify-center w-full h-full mb-10 align-center">
+							<Image
+								src="/icon-preview.svg"
+								alt="blacklist"
+								width={40}
+								height={40}
+							/>
+						</div>
+						<h2 className="mb-4 text-3xl font-semibold">Sneak preview</h2>
+						<p className="text-center max-w-[350px] break-words">
+							Quick preview of all snippets on your Clipboard for easy access.
+						</p>
+					</div>
+				</div>
 			</section>
 		</main>
 	);
