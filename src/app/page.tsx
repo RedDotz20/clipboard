@@ -182,6 +182,65 @@ export default function Clipboard() {
 					/>
 				</div>
 			</section>
+
+			<section className="flex flex-col items-center justify-center mt-24 mb-36">
+				<h1 className="mb-4 text-4xl font-semibold text-center">
+					Clipboard for iOS and Mac OS
+				</h1>
+				<p className="text-center max-w-[600px] break-words">
+					Available for free on the App Store. Download for Mac or iOS, sync
+					with iCloud and you're ready to start adding to your clipboard.
+				</p>
+				<DownloadButtons />
+			</section>
+
+			<footer className="flex flex-wrap items-center w-full gap-8 py-8 px-44">
+				<div className="mr-16">
+					<Image
+						src="/logo.svg"
+						alt="Logo"
+						width={50}
+						height={50}
+					/>
+				</div>
+				<div className="flex flex-col gap-2">
+					<p>FAQs</p>
+					<p>Contact Us</p>
+				</div>
+				<div className="flex flex-col gap-2">
+					<p>Privacy Policy</p>
+					<p>Press Kit</p>
+				</div>
+				<div className="self-start flex-1">
+					<p>Install Guide</p>
+				</div>
+				<div className="flex gap-4 ml-auto">
+					<div>
+						<Image
+							src="/icon-facebook.svg"
+							alt="facebook"
+							width={20}
+							height={20}
+						/>
+					</div>
+					<div>
+						<Image
+							src="/icon-twitter.svg"
+							alt="facebook"
+							width={20}
+							height={20}
+						/>
+					</div>
+					<div>
+						<Image
+							src="/icon-instagram.svg"
+							alt="facebook"
+							width={20}
+							height={20}
+						/>
+					</div>
+				</div>
+			</footer>
 		</main>
 	);
 }
