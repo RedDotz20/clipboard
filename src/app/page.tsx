@@ -11,7 +11,7 @@ export default function Clipboard() {
 					fill={true}
 				/>
 			</div>
-			<header className="flex flex-col items-center justify-center mt-24">
+			<header className="flex flex-col items-center justify-center mt-24 mb-36">
 				<Image
 					className="mb-12"
 					src="/logo.svg"
@@ -29,37 +29,41 @@ export default function Clipboard() {
 				<DownloadButtons />
 			</header>
 
-			{/* <section className="flex flex-col items-center justify-center">
-				<h1>keep track of your snippets</h1>
-				<p className="text-center">
+			<section className="flex flex-col items-center justify-center w-full">
+				<h1 className="mb-4 text-3xl font-semibold">
+					keep track of your snippets
+				</h1>
+				<p className="text-center max-w-[600px] break-words mb-16">
 					Clipboard instatly stores any item you copy in the cloud, meaning you
 					can access your snippets immediately on all your devices. Our Mac and
 					iOS apps will help you organize everything
 				</p>
 
-				<div className="flex">
+				<div className="flex justify-center w-full gap-32">
 					<Image
 						src="/image-computer.png"
 						alt="Logo"
-						width={350}
-						height={250}
+						width={800}
+						height={600}
 					/>
-					<div className="ml-auto mr-10">
-						<h2>Quick Search</h2>
-						<p>
+					<div className="my-auto">
+						<h2 className="mb-4 text-2xl font-black">Quick Search</h2>
+						<p className="max-w-[380px] break-words mb-14">
 							Easily search your snippets by content, category, web address,
 							application, and more
 						</p>
-						<h2>iCloud Sync</h2>
-						<p>Instantly saves and syncs snippets across all your devices.</p>
-						<h2>Complete History</h2>
-						<p>
+						<h2 className="mb-4 text-2xl font-black">iCloud Sync</h2>
+						<p className="max-w-[380px] break-words mb-14">
+							Instantly saves and syncs snippets across all your devices.
+						</p>
+						<h2 className="mb-4 text-2xl font-black">Complete History</h2>
+						<p className="max-w-[380px] break-words mb-14">
 							Retrieve any snippets from the first moment you started using the
 							app.
 						</p>
 					</div>
 				</div>
-			</section> */}
+			</section>
 		</main>
 	);
 }
