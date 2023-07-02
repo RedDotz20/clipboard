@@ -29,7 +29,7 @@ jobs:
           branch: gh-pages
           folder: clipboard/out
 
-  deploy-product-preview-card:
+  deploy-sneakers-ecommerce:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -40,7 +40,7 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: |
-          cd product-preview-card
+          cd sneakers-ecommerce
           npm ci
       - name: Build
         run: |
@@ -50,4 +50,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: product-preview-card/out
+          folder: sneakers-ecommerce/out
