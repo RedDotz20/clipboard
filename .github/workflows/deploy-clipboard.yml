@@ -35,7 +35,7 @@ jobs:
             echo "command=install" >> $GITHUB_ENV
             echo "runner=yarn" >> $GITHUB_ENV
             exit 0
-          elif [ -f "${{ github.workspace }}/clipboard/package.json" ]; then
+          elif [ -f "${{ github.workspace }}/clipboard/package-lock.json" ]; then
             echo "manager=npm" >> $GITHUB_ENV
             echo "command=ci" >> $GITHUB_ENV
             echo "runner=npx --no-install" >> $GITHUB_ENV
