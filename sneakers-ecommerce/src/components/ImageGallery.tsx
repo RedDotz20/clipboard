@@ -3,7 +3,12 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-const PreviewImage = ({ imageUrl, onClick }) => {
+interface PreviewImageProps {
+	imageUrl: string;
+	onClick: (imageUrl: string) => void;
+}
+
+const PreviewImage = ({ imageUrl, onClick }: PreviewImageProps) => {
 	return (
 		<img
 			src={imageUrl}
