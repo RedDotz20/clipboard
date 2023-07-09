@@ -1,6 +1,6 @@
 export default function Home() {
 	return (
-		<main>
+		<main className="h-screen">
 			<h2>SNEAKER COMPANY</h2>
 			<h1>Fall Limited Edition Sneakers</h1>
 			<p>
