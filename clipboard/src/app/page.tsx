@@ -189,7 +189,7 @@ export default function Clipboard() {
 				</div>
 			</section>
 
-			<section className="flex flex-col items-center justify-center mt-24 mb-36">
+			<section className="flex flex-col items-center justify-center mt-24 mb-24">
 				<h1 className="mb-4 text-4xl font-semibold text-center">
 					Clipboard for iOS and Mac OS
 				</h1>
@@ -200,8 +200,8 @@ export default function Clipboard() {
 				<DownloadButtons />
 			</section>
 
-			<footer className="flex flex-wrap items-center w-full gap-8 py-8 px-44">
-				<div className="mr-16">
+			<footer className="flex flex-col flex-wrap items-center w-full gap-8 py-8 lg:flex-row px-44">
+				<div className="lg:mr-16">
 					<Image
 						src="/logo.svg"
 						alt="Logo"
@@ -209,18 +209,16 @@ export default function Clipboard() {
 						height={50}
 					/>
 				</div>
-				<div className="flex flex-col gap-2">
-					<p>FAQs</p>
-					<p>Contact Us</p>
+
+				<div className="flex flex-col items-center grid-cols-1 lg:grid lg:gap-4 lg:grid-cols-3">
+					<p className="py-2 lg:py-0">FAQs</p>
+					<p className="py-2 lg:py-0">Contact Us</p>
+					<p className="py-2 lg:py-0">Privacy Policy</p>
+					<p className="py-2 lg:py-0">Press Kit</p>
+					<p className="py-2 lg:py-0">Install Guide</p>
 				</div>
-				<div className="flex flex-col gap-2">
-					<p>Privacy Policy</p>
-					<p>Press Kit</p>
-				</div>
-				<div className="self-start flex-1">
-					<p>Install Guide</p>
-				</div>
-				<div className="flex gap-4 ml-auto">
+
+				<div className="flex gap-4 lg:ml-auto">
 					<div>
 						<Image
 							src="/icon-facebook.svg"
