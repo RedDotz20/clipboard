@@ -189,7 +189,7 @@ export default function Clipboard() {
 				</div>
 			</section>
 
-			<section className="flex flex-col items-center justify-center mt-24 mb-24">
+			<section className="flex flex-col items-center justify-center mt-24 mb-20">
 				<h1 className="mb-4 text-4xl font-semibold text-center">
 					Clipboard for iOS and Mac OS
 				</h1>
@@ -210,17 +210,28 @@ export default function Clipboard() {
 					/>
 				</div>
 
-				<div className="flex flex-col items-center grid-cols-1 lg:grid lg:gap-4 lg:grid-cols-3">
-					<p className="py-2 lg:py-0">FAQs</p>
-					<p className="py-2 lg:py-0">Contact Us</p>
-					<p className="py-2 lg:py-0">Privacy Policy</p>
-					<p className="py-2 lg:py-0">Press Kit</p>
-					<p className="py-2 lg:py-0">Install Guide</p>
+				<div className="flex flex-col items-center grid-cols-1 lg:ml-4 lg:grid lg:gap-4 lg:grid-cols-3">
+					<p className="py-2 cursor-pointer lg:py-0 hover:text-strong-cyan">
+						FAQs
+					</p>
+					<p className="py-2 cursor-pointer lg:py-0 hover:text-strong-cyan">
+						Contact Us
+					</p>
+					<p className="py-2 cursor-pointer lg:py-0 hover:text-strong-cyan">
+						Privacy Policy
+					</p>
+					<p className="py-2 cursor-pointer lg:py-0 hover:text-strong-cyan">
+						Press Kit
+					</p>
+					<p className="py-2 cursor-pointer lg:py-0 hover:text-strong-cyan">
+						Install Guide
+					</p>
 				</div>
 
 				<div className="flex gap-4 lg:ml-auto">
 					<div>
 						<Image
+							className="cursor-pointer hover:text-strong-cyan"
 							src="/icon-facebook.svg"
 							alt="facebook"
 							width={20}
@@ -229,13 +240,14 @@ export default function Clipboard() {
 					</div>
 					<div>
 						<Image
+							className="cursor-pointer hover:text-strong-cyan"
 							src="/icon-twitter.svg"
 							alt="facebook"
 							width={20}
 							height={20}
 						/>
 					</div>
-					<div>
+					<div className="cursor-pointer hover:text-strong-cyan">
 						<Image
 							src="/icon-instagram.svg"
 							alt="facebook"
