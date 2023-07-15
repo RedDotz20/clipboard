@@ -9,14 +9,14 @@ export default function Home() {
 					Featuring a durable rubber outer sole, they'll withstand everything
 					the weather can offer
 				</p>
-				<div className="flex items-center gap-1">
-					<span>$125.00</span>
-					<div className="items-center overflow-hidden">
-						<span className="text-[#DA833E] font-bold bg-[#FEEFE2] px-1 text-[10px] rounded-sm inline-flex">
-							50%
-						</span>
-					</div>
-				</div>
+
+				<p className="flex items-center">
+					$125.00
+					<span className="text-[#DA833E] font-bold bg-[#FEEFE2] px-1 text-[10px] rounded-sm inline-flex pl-2">
+						50%
+					</span>
+				</p>
+
 				<span>$250.00</span>
 			</section>
 		</main>
