@@ -2,51 +2,48 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import { imageData } from '../data/images';
 
-interface PreviewImageProps {
-	imageUrl: string;
-	onClick: (imageUrl: string) => void;
-}
+type PreviewImageProps = { imageUrl: string };
 
-const PreviewImage = ({ imageUrl, onClick }: PreviewImageProps) => {
+const PreviewImage = ({ imageUrl, ...rest }: PreviewImageProps) => {
 	return (
-		<img
+		<Image
 			src={imageUrl}
 			alt="Preview Image"
-			onClick={() => onClick(imageUrl)}
+			className="rounded-lg"
+			width={70}
+			height={70}
+			{...rest}
 		/>
 	);
 };
 
 export default function ImageGallery() {
-	const [mainImage, setMainImage] = useState('main-image.jpg');
-
-	const handleImageClick = (imageUrl: string) => {
-		setMainImage(imageUrl);
-	};
+	const [mainImage, setMainImage] = useState(imageData.mainImage[0]);
+	const handleImageClick = (imageUrl: string) => setMainImage(imageUrl);
 
 	return (
-		<div>
-			<div>
+		<div className="flex flex-col items-center justify-center w-full gap-2">
+			<div className="relative">
 				<Image
+					className="rounded-lg"
 					src={mainImage}
 					alt="mainImage"
+					height={400}
+					width={400}
 				/>
 			</div>
-			<div className="preview-images">
-				<PreviewImage
-					imageUrl="preview1.jpg"
-					onClick={handleImageClick}
-				/>
-				<PreviewImage
-					imageUrl="preview2.jpg"
-					onClick={handleImageClick}
-				/>
-				<PreviewImage
-					imageUrl="preview3.jpg"
-					onClick={handleImageClick}
-				/>
-				{/* Add more preview images as needed */}
+
+			<div className="flex gap-2 ">
+				{imageData.thumbnail.map((image: string, index) => {
+					return (
+						<PreviewImage
+							imageUrl={image}
+							key={index}
+						/>
+					);
+				})}
 			</div>
 		</div>
 	);

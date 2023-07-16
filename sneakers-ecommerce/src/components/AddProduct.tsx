@@ -14,10 +14,10 @@ export default function AddProduct() {
 	};
 
 	return (
-		<div className="flex gap-4">
-			<div className="bg-[#F7F8FD] flex gap-2 items-center">
+		<div className="flex w-full gap-4">
+			<div className="bg-[#F7F8FD] flex justify-center gap-2 items-center w-1/4 ">
 				<button
-					className="h-full px-5 cursor-pointer"
+					className="flex items-center justify-center w-full h-full cursor-pointer"
 					onClick={decreaseQuantity}
 				>
 					<Image
@@ -27,9 +27,11 @@ export default function AddProduct() {
 						height={10}
 					/>
 				</button>
+
 				<p className="w-10 px-2 text-center">{quantity}</p>
+
 				<button
-					className="h-full px-5 cursor-pointer"
+					className="flex items-center justify-center w-full h-full cursor-pointer"
 					onClick={increaseQuantity}
 				>
 					<Image
@@ -40,7 +42,7 @@ export default function AddProduct() {
 					/>
 				</button>
 			</div>
-			<button className="bg-[#FF7D1B] text-white py-4 px-20 rounded-md text-[1rem] font-semibold flex gap-4">
+			<button className="bg-[#FF7D1B] text-white py-4 px-20 rounded-md text-[1rem] font-semibold flex gap-4 w-3/4 justify-center">
 				<Image
 					src="icon-cart.svg"
 					alt="cart"
