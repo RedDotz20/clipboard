@@ -1,4 +1,5 @@
 'use client';
+
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -21,6 +22,7 @@ export default function AddProduct() {
 					onClick={decreaseQuantity}
 				>
 					<Image
+						className="border-2 border-[#DA833E]"
 						src="icon-minus.svg"
 						alt="cart"
 						width={10}

@@ -17,6 +17,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={kumbhSans.className}>
+				<div id="portal"></div>
 				<Navbar />
 				{children}
 			</body>
