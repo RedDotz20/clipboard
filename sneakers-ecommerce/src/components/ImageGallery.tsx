@@ -3,33 +3,13 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { imageData } from '../data/images';
-
-type PreviewImageProps = {
-	imageUrl: string;
-	className?: string;
-	style?: React.CSSProperties;
-	onClick: () => void;
-};
-
-const PreviewImage = ({ imageUrl, className, ...rest }: PreviewImageProps) => {
-	return (
-		<div
-			className={className}
-			{...rest}
-		>
-			<Image
-				src={imageUrl}
-				alt="Preview Image"
-				className="rounded-lg"
-				width={70}
-				height={70}
-			/>
-		</div>
-	);
-};
+import ImagePreview from './ImagePreview';
+import ModalPortal from './Portal';
 
 export default function ImageGallery() {
+	const [isImagePreview, setIsImagePreview] = useState(false);
 	const [mainImage, setMainImage] = useState(imageData.mainImage[0]);
+
 	const processedThumbnail = mainImage.replace('.jpg', '-thumbnail.jpg');
 
 	const handleImageClick = (imageUrl: string) => {
@@ -38,34 +18,50 @@ export default function ImageGallery() {
 	};
 
 	return (
-		<div className="flex flex-col items-center justify-center w-full gap-2">
-			<div className="relative">
-				<Image
-					className="rounded-lg"
-					src={mainImage}
-					alt="mainImage"
-					height={400}
-					width={400}
-				/>
-			</div>
+		<>
+			<ModalPortal
+				open={isImagePreview}
+				onClose={() => setIsImagePreview(false)}
+			>
+				<ImagePreview />
+			</ModalPortal>
 
-			<div className="flex gap-2">
-				{imageData.thumbnail.map((image: string, index) => {
-					return (
-						<PreviewImage
-							imageUrl={image}
-							key={index}
-							className={`rounded-xl p-1 cursor-pointer ${
-								processedThumbnail === image
-									? 'border-4 p-0 border-[#DA833E]'
-									: ''
-							}`}
-							// style={{ margin: '0.5rem' }}
-							onClick={() => handleImageClick(image)}
-						/>
-					);
-				})}
+			<div className="flex flex-col items-center justify-center w-full gap-2">
+				<div className="relative">
+					<Image
+						className="rounded-lg cursor-pointer"
+						src={mainImage}
+						alt="mainImage"
+						height={400}
+						width={400}
+						onClick={() => setIsImagePreview(true)}
+					/>
+				</div>
+
+				<div className="flex gap-2">
+					{imageData.thumbnail.map((image: string, index) => {
+						return (
+							<div
+								key={index}
+								onClick={() => handleImageClick(image)}
+								className={`rounded-xl cursor-pointer ${
+									processedThumbnail === image
+										? 'border-4 border-[#DA833E]'
+										: 'border-4 border-[#fff]'
+								}`}
+							>
+								<Image
+									src={image}
+									alt="Preview Image"
+									className="rounded-lg"
+									width={70}
+									height={70}
+								/>
+							</div>
+						);
+					})}
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }
