@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-export default function AddProduct() {
+export default function ProductQuantity() {
 	const [quantity, setQuantity] = useState(0);
 
 	const increaseQuantity = () => {

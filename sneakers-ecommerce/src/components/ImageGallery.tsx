@@ -1,5 +1,6 @@
 'use client';
 
+import { AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 import { imageData } from '../data/images';
@@ -19,12 +20,23 @@ export default function ImageGallery() {
 
 	return (
 		<>
-			<ModalPortal
-				open={isImagePreview}
-				onClose={() => setIsImagePreview(false)}
+			<AnimatePresence
+				initial={false}
+				mode="wait"
+				onExitComplete={() => null}
 			>
-				<ImagePreview />
-			</ModalPortal>
+				{isImagePreview && (
+					<ModalPortal className="fixed z-50 p-4 transform -translate-x-1/2 -translate-y-1/2 bg-white top-1/2 left-1/2">
+						<button
+							className="absolute font-bold text-red-700 right-3 top-2"
+							onClick={() => setIsImagePreview(false)}
+						>
+							X
+						</button>
+						<ImagePreview />
+					</ModalPortal>
+				)}
+			</AnimatePresence>
 
 			<div className="flex flex-col items-center justify-center w-full gap-2">
 				<div className="relative">

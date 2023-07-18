@@ -1,4 +1,4 @@
-import AddProduct from '@/components/AddProduct';
+import ProductQuantity from '@/components/ProductQuantity';
 import ImageGallery from '../components/ImageGallery';
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
 						<span className="text-[#5C5B5F] line-through text-xs">$250.00</span>
 					</div>
 
-					<AddProduct />
+					<ProductQuantity />
 				</div>
 			</section>
 		</main>
