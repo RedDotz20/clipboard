@@ -1,0 +1,102 @@
+* {
+	font-family: 'Inter', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #e0e8ff;
+}
+
+section {
+	width: 450px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: -4px 13px 31px 0px rgba(0, 0, 0, 0.31);
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+}
+
+img[class='background'] {
+	content: url('./assets/pattern-background-desktop.svg');
+	color: #d6e1ff;
+	position: absolute;
+	z-index: -999;
+	width: 100vw;
+	top: 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+img[class='header'] {
+	content: url('./assets/illustration-hero.svg');
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+}
+
+h1 {
+	text-align: center;
+	margin: 2rem 0 1rem;
+}
+
+p {
+	text-align: center;
+	padding: 0 2rem;
+	line-height: 1.75rem;
+	margin-bottom: 2rem;
+}
+
+.plan {
+	display: flex;
+	background-color: #f8f9fe;
+	padding: 1rem 2rem;
+}
+
+.plan img[class='music-icon'] {
+	content: url('./assets/icon-music.svg');
+}
+
+.plan .details {
+	display: flex;
+	flex-direction: column;
+	margin-left: 1rem;
+	gap: 0.4rem;
+}
+
+.details span:first-child {
+	font-weight: 700;
+}
+
+.details span:last-child {
+	color: #8b91b1;
+}
+
+.plan a {
+	font-weight: 700;
+	margin: auto 0 auto auto;
+}
+
+button {
+	font-weight: 700;
+	border: 0;
+	color: #fff;
+	background-color: #382ae1;
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.5rem;
+	margin: 0.5rem 2rem;
+	cursor: pointer;
+}
+
+a[class='cancel'] {
+	text-align: center;
+	text-decoration: none;
+	color: #878aab;
+	margin: 0.75rem auto 2rem;
+}
