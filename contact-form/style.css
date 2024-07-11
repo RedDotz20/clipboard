@@ -1,0 +1,207 @@
+/*? Karla Regular and Bold Fonts */
+@font-face {
+	font-family: 'Karla';
+	src: url('./assets/fonts/static/Karla-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Karla';
+	src: url('./assets/fonts/static/Karla-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+/*? Karla Varable Fonts */
+@font-face {
+	font-family: 'Karla';
+	src: url('./assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Karla';
+	src: url('./assets/fonts/Karla-Italic-VariableFont_wght.ttf')
+		format('truetype');
+	font-weight: 100 900;
+	font-style: italic;
+}
+
+:root {
+	/*? primary colors*/
+	--green-lighter: hsl(148, 38%, 91%);
+	--green-medium: hsl(169, 82%, 27%);
+	--red: hsl(0, 66%, 54%);
+	/*? neutral colors*/
+	--white: hsl(0, 0%, 100%);
+	--gray-medium: hsl(186, 15%, 59%);
+	--gray-darker: hsl(187, 24%, 22%);
+}
+
+* {
+	font-family: 'Karla', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	background-color: var(--green-lighter);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+body {
+	background-color: var(--white);
+	padding: 2rem;
+	border-radius: 1.25rem;
+	width: 620px;
+	max-width: 500px;
+	height: fit-content;
+	line-height: 1.6;
+}
+
+header {
+	font-size: 1.75rem;
+	display: inline-block;
+	font-weight: 700;
+	margin-bottom: 1rem !important;
+}
+
+form * {
+	border-radius: 6px;
+	margin-bottom: 0.25rem;
+}
+
+form,
+.text-group,
+.message-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+input,
+textarea {
+	outline: none;
+	border: 1px solid var(--gray-medium);
+	padding: 0.5rem;
+}
+
+label {
+	font-size: 16px;
+	margin-bottom: 4px;
+}
+
+label span {
+	margin-left: 0.25rem;
+	color: var(--green-medium);
+}
+
+.text-container {
+	display: flex;
+	width: 100%;
+	gap: 0.5rem;
+}
+
+.radio-group {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	gap: 0.5rem;
+}
+
+.radio-wrapper {
+	width: 100%;
+}
+
+.radio-wrapper input[type='radio'] {
+	display: none;
+}
+
+.radio-wrapper label {
+	width: 100%;
+	white-space: nowrap;
+	display: inline-block;
+	border-radius: 8px;
+	position: relative;
+	cursor: pointer;
+	padding: 0.5rem 1rem 0.5rem 3.5rem;
+	background-color: var(--white);
+	border: 1px solid var(--gray-medium);
+}
+
+/*? Custom Radio  */
+.radio-wrapper label::before,
+.radio-wrapper label::after {
+	content: '';
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	left: 12%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.radio-wrapper label::before {
+	width: 14px;
+	height: 14px;
+	border: 2px solid var(--gray-medium);
+}
+
+.radio-wrapper label::after {
+	background-color: var(--green-medium);
+	width: 10px;
+	height: 10px;
+	opacity: 0;
+}
+
+.radio-wrapper [type='radio']:checked + label::after {
+	opacity: 1;
+}
+
+.radio-wrapper [type='radio']:checked + label::before {
+	border: 2px solid var(--green-medium);
+}
+
+.radio-wrapper [type='radio']:checked + label {
+	background-color: var(--green-lighter);
+	border: 1px solid var(--green-medium);
+}
+
+.message-container textarea {
+	width: 100%;
+	height: calc(3 * 1.4em + 0.8rem);
+	line-height: 1.4em;
+	resize: none;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	padding: 0.25rem 0.5rem;
+}
+
+.consent-container {
+	margin: 1rem 0 !important;
+}
+
+.consent-container input[type='checkbox'],
+.consent-container label {
+	cursor: pointer;
+}
+
+.consent-container input[type='checkbox'] {
+	padding: 1rem;
+	accent-color: var(--green-medium);
+}
+
+button {
+	outline: none;
+	padding: 0.5rem 1rem;
+	color: var(--white);
+	background-color: var(--green-medium);
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: hsl(169, 82%, 25%);
+}

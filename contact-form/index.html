@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <form>
+    <header>Contact Us</header>
+    <div class="text-container">
+      <div class="text-group">
+        <label for="firstName">First Name <span>*</span></label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+
+      <div class="text-group">
+        <label for="lastName">Last Name <span>*</span></label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+    </div>
+
+    <div class="text-group">
+      <label for="email">Email Address <span>*</span></label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="radio-container">
+      <label for="generalEnquiry">Query Type <span>*</span></label>
+      <div class="radio-group">
+        <div class="radio-wrapper">
+          <input type="radio" id="generalEnquiry" name="queryType" value="general" required>
+          <label for="generalEnquiry">General Enquiry</label>
+        </div>
+
+        <div class="radio-wrapper">
+          <input type="radio" id="supportRequest" name="queryType" value="support" required>
+          <label for="supportRequest">Support Request</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="message-container">
+      <label for="message">Message <span>*</span></label>
+      <textarea name="message" id="message" placeholder="Your Message"></textarea>
+    </div>
+
+    <div class="consent-container">
+      <input type="checkbox" id="consent" name="consent" value="yes">
+      <label for="consent">I hereby consent to being contacted by the team</label><br>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+
+</html>
